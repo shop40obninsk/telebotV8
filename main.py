@@ -3,7 +3,7 @@ import Sender_message_telegram
 import tele_keyboards
 import message_worker
 
-token="1233173072:AAHvqvXYxLK6fuZquGlkn3iw1XEXtBQfKf0"
+token=os.environ.get('data_token', None)
 bot = telebot.TeleBot(token)
 print("BOT RUN")
 
