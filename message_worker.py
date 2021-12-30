@@ -81,7 +81,6 @@ def inline_buttons_worker(bot,call,text):
         Sender_message_telegram.send_message(bot, None, "Выбери модель", call=call, keyboard=keyboard)
 
     if "Y" in text:
-        main_path=r"E:\Den_2.1"
         Sender_message_telegram.delete_message(bot,None,call=call)
         code=text.replace("Y","")
         print(code)
@@ -99,7 +98,7 @@ def inline_buttons_worker(bot,call,text):
             id_manufacturer=i[0][1]
             name_good=i[0][2]
             description_good=i[0][3]
-            picture_video_good=str(main_path)+str(i[0][4])
+            picture_video_good=str(i[0][4])
             price_good=i[0][5]
             tastes_good=i[1]
             print(id_good,id_manufacturer,name_good,description_good,picture_video_good,tastes_good,price_good)
