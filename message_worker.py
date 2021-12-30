@@ -98,7 +98,7 @@ def inline_buttons_worker(bot,call,text):
             id_manufacturer=i[0][1]
             name_good=i[0][2]
             description_good=i[0][3]
-            picture_video_good=str(i[0][4])
+            picture_video_good=str(i[0][4])[1:]
             price_good=i[0][5]
             tastes_good=i[1]
             print(id_good,id_manufacturer,name_good,description_good,picture_video_good,tastes_good,price_good)
