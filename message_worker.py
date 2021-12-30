@@ -158,7 +158,10 @@ def inline_buttons_worker(bot,call,text):
         count_in_basket=len(DBU.get_filter("basket", "chat_id", str(chat_id)))
         print(count_in_basket)
         id=Sender_message_telegram.send_message(bot,None,"Корзина изменена",call=call)
-        Sender_message_telegram.delete_messages(bot, None,id, count_in_basket+3, call=call)
+        try:
+            Sender_message_telegram.delete_messages(bot, None,id, count_in_basket+3, call=call)
+        except:
+            pass
         basket(bot,call.message)
 
     elif "L" in text:
