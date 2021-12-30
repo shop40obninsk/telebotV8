@@ -2,6 +2,7 @@ import telebot
 import Sender_message_telegram
 import tele_keyboards
 import message_worker
+import os
 
 token=os.environ.get('data_token', None)
 bot = telebot.TeleBot(token)
