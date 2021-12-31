@@ -57,7 +57,7 @@ def get_message(message):
     name = message.chat.username
     chat_id=message.chat.id
     print(text,chat_id)
-    message_worker.add_in_Users_Base(chat_id, name)
+    #message_worker.add_in_Users_Base(chat_id, name)
     message_worker.main_command_worker(bot, message, text)
 
 
